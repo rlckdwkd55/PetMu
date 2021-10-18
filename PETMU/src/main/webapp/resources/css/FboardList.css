@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+	.outer{
+		width : 1400px;
+		height : auto;
+		background : white;
+		margin-left : auto;
+		margin-right: auto;
+		padding: 0 50px 50px 50px;
+
+	}
+	
+	#title {
+		font-weight : bold;
+		margin-left : 40px;
+	}
+	
+	#cateicon { /* 카테고리 아이콘 */
+		font-size: 30px;
+		color: grey;
+		margin-left : 40px;
+	}
+	
+	#likeicon {
+		color : orange;
+	}
+	
+	.category {
+		font-family: 'Jua', sans-serif;
+		margin-top : -30px;
+		font-size : 30px;
+		color : orange;
+	}
+	
+	.tableArea {
+		width : 1300px;
+		height : auto;
+	}
+	
+	#listArea tbody td:nth-child(2) {
+        text-align: left;
+    }
+	
+	#listArea {
+		margin-left : 40px;
+	}
+	
+	
+	#listArea {
+		width : 1300px;
+		border-collapse : collapse;
+	}
+	
+    #listArea th {
+    	height : 30px;
+        border-top : 3px solid gray;
+        border-bottom : 1px solid lightgray;
+    }
+    
+   	#listArea td {
+   		height : 30px;
+        border-bottom : 1px solid lightgray;
+    }
+    
+    #listArea td:hover {
+    	cursor:pointer;
+    }
+    
+    #listArea i {
+    	color : orange;
+    }
+    
+    .btnArea {
+    	width : 1330px;
+    }
+    
+    #postBtn {
+  		width : 100px;
+		padding : 10px;
+		border : 0;
+		outline: none;
+		color : orange;
+		font-weight: bold;
+		font-size : 15px;
+		margin : auto;
+  		display : block;
+  		text-align: center;
+  		float : right;
+  	}
+  
+  	#postBtn:hover {
+	 	opacity : 0.5;
+     	cursor : pointer;
+	}
+	
+    .pagingArea button {
+    	color : gray;
+    	background : none;
+    	border : none;
+    	font-family: 'Jua', sans-serif;
+    	font-size : 13pt;
+    }
+    
+    .pagingArea button:hover {
+    	color : orange;
+    	cursor: pointer;
+    }
+	
+   	#searchFrm {
+		text-align: center;
+		display : flex;
+		width : 510px;
+		margin-left : auto;
+		margin-right : auto;
+	}
+	
+	#bsearch {
+		width:350px; 
+		height:26px;
+		border :1px solid grey;
+	}
+	
+	select {
+		width:80px; 
+		height:30px;
+		border : 1px solid grey;
+	}
+	
+	#searchBtn {
+		width:60px; 
+		height:32px; 
+		border:0; 
+		font-weight: bold;
+		color : orange;
+	}

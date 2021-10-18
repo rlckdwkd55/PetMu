@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+section {
+	width: 1400px;
+	height: auto;
+	background: white;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 50px 50px 50px;
+}
+
+#thumbnailArea {
+	width: 1300px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	padding-left: 12px;
+}
+
+.thumb-list {
+	width: 230px;
+	border: 1px solid grey;
+	display: inline-block;
+	margin: 11px;
+}
+
+.thumb-list:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+ul {
+	width: 200px;
+	list-style: none;
+	text-align: center;
+	/* 블릿기호 없애고 생긴 여백 없애기 */
+	padding-left: 0px;
+	/* 글자수 200px 초과시 안보이게 */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+#btitle {
+	font-weight: bold;
+}
+
+#cateIcon { /* 카테고리 아이콘 */
+	font-size: 40px;
+	color: grey;
+}
+
+.category {
+	font-family: 'Jua', sans-serif;
+	margin-top: -30px;
+	font-size: 50px;
+	color: orange;
+}
+
+#Bhead {
+	text-align: center;
+}
+
+#photoInfo {
+	font-family: 'Jua', sans-serif;
+	text-align: center;
+	margin-top: -8px;
+	font-size: 23px;
+	color: grey;
+}
+
+#btn1 {
+	width: 100px;
+	padding: 10px;
+	border: 0;
+	outline: none;
+	color: orange;
+	font-weight: bold;
+	font-size: 15px;
+	margin: auto;
+	display: block;
+	text-align: center;
+	float: right;
+}
+
+#btn1:hover {
+	cursor: pointer;
+}
+
+.pagingArea button {
+	color: gray;
+	background: none;
+	border: none;
+	font-family: 'Jua', sans-serif;
+	font-size: 13pt;
+}
+
+.pagingArea button:hover {
+	color: orange;
+	cursor: pointer;
+}
+
+#searchFrm {
+	text-align: center;
+	display: flex;
+	width: 510px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#bsearch {
+	width: 350px;
+	height: 26px;
+	border: 1px solid grey;
+}
+
+select {
+	width: 80px;
+	height: 30px;
+	border: 1px solid grey;
+}
+
+#searchBtn {
+	width: 60px;
+	height: 32px;
+	border: 0;
+	font-weight: bold;
+	color: orange;
+}
+
+#btn2 {
+	width: 60px;
+	height: 35px;
+	border: 0;
+	font-weight: bold;
+	color: orange;
+}
+
+#btn2:hover {
+	cursor: pointer;
+}

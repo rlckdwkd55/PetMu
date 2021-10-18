@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+.outer {
+	width: 1400px;
+	height: auto;
+	background: white;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 50px 50px 50px;
+	margin-top: 40px;
+}
+
+.category {
+	width: 1200px;
+	margin-left: 40px;
+}
+
+i { /* 카테고리 아이콘 */
+	font-size: 24px;
+	color: grey;
+}
+
+#cate { /* 상단 머리글 */
+	font-size: 25px;
+	text-decoration: none;
+}
+
+#btitle {  /* 제목입력부분 */
+	font-size: 20px;
+	width: 1280px;
+	border: 0;
+	border-bottom: 1px solid grey;
+	padding: 10px;
+}
+
+.tableArea {
+	width: 1300px;
+	margin-left: 40px;
+	border: 1px solid lightgrey;
+	padding: 25px 25px 25px 25px;
+}
+
+table {
+	padding: 10px;
+}
+
+.ck.ck-editor {  /* ck에디터 크기조정 */
+	max-width: 1300px;
+}
+
+.ck-editor__editable {
+	min-height: 500px;
+}
+
+.btnArea button {
+	width: 100px;
+	padding: 10px;
+	border: 0;
+	outline: none;
+	color: orange;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.btnArea button:hover {
+	cursor: pointer;
+}

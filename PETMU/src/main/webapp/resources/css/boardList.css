@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+.main {
+        width : 1450px;
+        margin: 0 auto 15px auto;
+    }
+    
+    .main:after {
+    	content: ''; display: block; clear: both;
+    }
+    
+    .boardArea {
+	    width : 1200px;
+	    float : right;   
+    }
+    
+    #listArea tbody td:nth-child(3) {
+        text-align: left;
+    }
+	
+	#listArea {
+		border-collapse : collapse;
+	}
+	
+    #listArea th {
+    	height : 30px;
+        border-top : 3px solid gray;
+        border-bottom : 1px solid lightgray;
+    }
+    
+   	#listArea td {
+   		height : 30px;
+        border-bottom : 1px solid lightgray;
+    }
+    
+    #btnArea {
+    	padding-right: 30px;
+    }
+
+    #postBtn {
+    	width : 80px;
+    	height : 35px;
+    	color : orange;
+        font-size: 12pt;
+        font-weight: bold;
+        background : rgb(231, 231, 231);
+        border: none;;
+        border-radius: 3px;
+    }
+
+    #postBtn:hover {
+        cursor: pointer;
+    }
+    
+    #listArea i {
+    	color : orange;
+    }
+    
+    .pagingArea button {
+    	color : gray;
+    	background : none;
+    	border : none;
+    	font-family: 'Jua', sans-serif;
+    	font-size : 13pt;
+    }
+    
+    .pagingArea button:hover {
+    	color : orange;
+    	cursor: pointer;
+    }
+    
+	
+	#searchFrm {
+		text-align: center;
+		display : flex;
+		width : 510px;
+		margin-left : auto;
+		margin-right : auto;
+		padding-top : 10px;
+	}
+	
+	#bsearch {
+		width:350px; 
+		height:26px;
+		border :1px solid grey;
+	}
+	
+	select {
+		width:80px; 
+		height:30px;
+		border : 1px solid grey;
+	}
+	
+	#searchBtn {
+		width:60px; 
+		height:32px; 
+		border:0; 
+		font-weight: bold;
+		color : orange;
+	}
+    
+    #searchBtn:hover {
+    	cursor : pointer;
+    }

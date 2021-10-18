@@ -1,0 +1,368 @@
+@charset "UTF-8";
+
+section {
+	width: 1400px;
+	height: auto;
+	background: white;
+	color: black;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 50px 50px 50px;
+}
+
+.category {
+	margin-left: 45px;
+}
+
+.detail {
+	width: 1200px;
+	text-align: right;
+}
+
+#outline {
+	width: 1300px;
+	margin-left: 45px;
+	border: 1px solid lightgrey;
+	padding: 15px 15px 15px 15px;
+}
+
+#cateIcon { /* 카테고리 아이콘 */
+	font-size: 30px;
+	color: grey;
+}
+
+a { /* 카테고리 a태그 */
+	font-size: 30px;
+	text-decoration: none;
+	color: orange;
+	font-family: 'Jua', sans-serif;
+}
+
+.tableArea {
+	width: 1300px;
+	margin-left: 35px;
+	border: 1px solid lightgrey;
+	padding: 25px 25px 25px 25px;
+}
+
+.tableArea th:first-child {
+	text-align: left;
+	font-size: 25px;
+	width: 900px;
+}
+
+.tableArea th:last-child {
+	text-align: right;
+	font-weight: normal;
+}
+
+.tableArea td:first-child {
+	font-weight: bold;
+}
+
+.tableArea td {
+	border-bottom: 1px solid lightgray;
+	height: 35px;
+}
+
+.tableArea span {
+	font-weight: normal;
+}
+
+#contentArea {
+	width: 607px;
+}
+
+#content {
+	width: 200px;
+}
+
+/* 사진 슬라이드쇼 */
+.slides {
+	padding: 0;
+	width: 609px;
+	height: 420px;
+	display: block;
+	margin-left: 0;
+	position: relative;
+}
+
+.slides * {
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+}
+
+.slides input {
+	display: none;
+}
+
+.slide-container {
+	display: block;
+}
+
+.slide {
+	top: 0;
+	opacity: 0;
+	width: 609px;
+	height: 420px;
+	display: block;
+	position: absolute;
+	transform: scale(1);
+	transition: all .7s ease-in-out;
+}
+
+.slide img {
+	width: 100%;
+	height: 100%;
+}
+
+.nav label {
+	height: 100%;
+	display: none;
+	position: absolute;
+	opacity: 0;
+	z-index: 9;
+	cursor: pointer;
+	transition: opacity .2s;
+	color: #FFF;
+	font-size: 140pt;
+	text-align: center;
+	line-height: 380px;
+	background-color: rgba(255, 255, 255, .3);
+	text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover+.nav label {
+	opacity: 0.5;
+}
+
+.nav label:hover {
+	opacity: 1;
+}
+
+.nav .next {
+	right: 0;
+}
+
+input:checked+.slide-container  .slide {
+	opacity: 1;
+	transform: scale(1);
+	transition: opacity 1s ease-in-out;
+}
+
+input:checked+.slide-container .nav label {
+	display: block;
+}
+
+.nav-dots {
+	width: 100%;
+	bottom: 9px;
+	height: 11px;
+	display: block;
+	position: absolute;
+	text-align: center;
+}
+
+.nav-dots .nav-dot {
+	top: -5px;
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1, 
+input#img-2:checked ~ .nav-dots label#img-dot-2, 
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4 {
+	background: rgba(0, 0, 0, 0.8);
+}
+
+#content {
+	width: 800px;
+	heigth: auto;
+	padding: 5px;
+	font-size: 13pt;
+}
+
+#likeArea>span {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 18px;
+	font-weight: bold;
+	width: auto;
+	height: 35px;
+	padding: 0 10px;
+	border: 1px solid orange;
+	border-radius: 3px;
+	background: rgb(255, 244, 230);
+}
+
+#likeArea i {
+	padding-right: 7px;
+}
+
+#likeArea>span:hover {
+	cursor: pointer;
+	color: white;
+	background: orange;
+}
+
+#btnArea {
+	float: right;
+}
+
+#btnArea button {
+	width: 50px;
+	padding: 10px;
+	border: 0;
+	outline: none;
+	font-weight: bold;
+	font-size: 15px;
+	border-radius: 3px;
+}
+
+#btnArea button:hover {
+	cursor: pointer;
+}
+
+#deleteBtn {
+	color: white;
+	background: rgb(254, 54, 64);
+}
+
+/* 댓글 */
+#cmtCount {
+	font-weight: bold;
+}
+
+#cmtCount label {
+	color: orange;
+}
+
+[class*=cmts] {
+	border-bottom: 1px solid lightgray;
+}
+
+.cmtListArea {
+	max-height: 600px;
+	overflow: auto;
+	padding: 0 8px;
+}
+
+.cmtHead>div {
+	float: left;
+}
+
+.cmtHead>span {
+	float: right;
+}
+
+.cmtHead i:hover {
+	cursor: pointer;
+}
+
+.cmtBody {
+	padding: 5px 0;
+}
+
+.cmtFoot {
+	text-align: right;
+	font-size: 12px;
+	color: gray;
+	padding-bottom: 3px;
+}
+
+#cmtInsert {
+	display: flex;
+	align-items: center;
+	padding: 20px 0;
+}
+
+#ccontent {
+	border: 2px solid lightgray;
+	border-radius: 3px;
+}
+
+#ccontent:focus, #upCon:focus {
+	outline: none;
+}
+
+#cmtBtn {
+	margin-left: 10px;
+	width: 110px;
+	height: 53px;
+	background: rgb(241, 241, 241);
+	border: 2px solid gray;
+	border-radius: 3px;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+#cmtBtn:hover {
+	background: rgb(241, 241, 241);
+	cursor: pointer;
+}
+
+/* 댓글 수정*/
+.cmtUpdate {
+	border-bottom: 1px solid lightgray;
+	padding-top: 3px;
+}
+
+.upHead>div {
+	float: left;
+}
+
+.upHead>span {
+	float: right;
+}
+
+.upBody {
+	padding: 5px 0;
+}
+
+.upFoot {
+	text-align: right;
+	font-size: 12px;
+	color: gray;
+	padding-bottom: 3px;
+}
+
+#cmtCon {
+	border: 2px solid lightgray;
+	border-radius: 3px;
+}
+
+/* 하단 목록 버튼 */
+.btnArea2 {
+	margin: auto;
+	display: block;
+	text-align: center;
+}
+
+#goListBtn {
+	width: 100px;
+	padding: 10px;
+	border: 0;
+	outline: none;
+	color: orange;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+#goListBtn:hover {
+	cursor: pointer;
+}
