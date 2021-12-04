@@ -143,4 +143,55 @@
 </script>
 ```
 
+#
 
+### 우리동네 동물병원 
+![map](https://user-images.githubusercontent.com/83908822/144702222-c1bdd565-14f4-4153-9762-dc7d31af87df.gif)
+1. 카카오지도API 사용
+2. GeoLocation을 이용 위도, 경도를 얻어온 후 인포윈도우에 "현재위치" 로 표시
+3. 지도 접속 시 해당 위치를 중심좌표로 설정 
+4. 공공데이터를 받아온 후 지오코딩을 이용해 위도경도값을 추출, 지도에 병원정보를 뿌려준다
+5. eventListener를 이용 이벤트값을 받아 마커위에 마우스가 위치하면 병원이름 표출, 나갈 시 사라짐
+
+ ``` java
+ navigator.geolocation.getCurrentPosition(function (position) {
+
+				var lat = position.coords.latitude, // 위도
+					lon = position.coords.longitude; // 경도
+
+				var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
+					message = '<div style="padding:5px;">현재위치</div>'; // 인포윈도우에 표시될 내용입니다
+
+				// 마커와 인포윈도우를 표시합니다
+				displayMarker(locPosition, message);
+
+			});
+			// 지도에 마커와 인포윈도우를 표시하는 함수입니다
+			function displayMarker(locPosition, message) {
+
+				// 마커를 생성합니다
+				var marker_present = new kakao.maps.Marker({
+					map: map,
+					position: locPosition
+				});
+
+				var iwContent = message, // 인포윈도우에 표시할 내용
+					iwRemoveable = true;
+
+				// 인포윈도우를 생성합니다
+				var infowindow = new kakao.maps.InfoWindow({
+					content: iwContent,
+					removable: iwRemoveable
+				});
+
+				// 인포윈도우를 마커위에 표시합니다 
+				infowindow.open(map, marker_present);
+
+				// 지도 중심좌표를 접속위치로 변경합니다
+				map.setCenter(locPosition);
+			}
+		}
+		
+ ```
+ 
+ 
